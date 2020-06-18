@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>FDplayer</title>
+		<script type="text/javascript" src="pjs/index.js"></script>
+		<style type="text/css">
+			code{
+				color: #808080;
+				font-family: "Consolas";
+			}
+		</style>
+	</head>
+	<body style="min-width: 1000px;color: #424242;">
+		<div style="text-align: center;font-size: 40px;margin: 20px;color: navy;"><b>FDplayer-Touch v0.9</b></div>
+		<div style="text-align: center;font-size: 30px;margin: 25px 0px 5px 0px;">一个简洁的H5播放器</div>
+		<div style="text-align: center;font-size: 16px">适用于Firefox&Chromium</div>
+		<div style="font-size: 25px;margin: 50px 0px 20px 0px;">
+			<div style="width: 800px;margin: 0 auto;">演示视频：Hanser-舞池之实.mp4</div>
+		</div>
+		<div id="player" style="overflow: hidden;border-radius:5px; margin: 0 auto;width: 800px;height: 600px;box-shadow:0px 0px 5px rgba(0,0,0,0.5);background-color: rgba(0,0,0,0.5);"></div>
+		<script>
+			player = {
+				noid: "10086",
+				name: "Hanser-舞池之实",
+				url: "video/video.mp4",
+				width: 800,
+				height: 600,
+				viewWindow: "player",
+				centerPlayTimeBlockSwitch: true,
+				autoplay: false
+			}
+		</script>
+		<div style="margin: 50px;font-size: 20px;">
+			<div style="width: 800px;margin: 0 auto;">
+				<div style="font-size: 30px;margin-bottom: 25px;">使用帮助</div>
+				<div>
+					<p>适用于支持触屏的计算机，支持H.264，VP8等格式的视频文件播放*</p>
+					<div style="text-align: center;">
+						<img src="img/img05.jpg" width="750px" />
+					</div>
+					<div style="text-align: right;font-size: 10px;">
+						*注：具体格式支持请参照HTML5标准中关于&lt;video&gt;的支持情况。
+					</div>
+				</div>
+				<div>
+					<p>暂停、播放、全屏、调节播放进度和播放速度(支持x0.25-x16倍速播放)</p>
+					<div style="text-align: center;">
+						<img src="img/img04.jpg" width="750px" />
+					</div>
+				</div>
+				<div>
+					<p>调节播放进度时窗口中央显示播放进度</p>
+					<div style="text-align: center;">
+						<img src="img/img01.jpg" width="750px" />
+					</div>
+				</div>
+				<div>
+					<p>触屏优化：双击暂停&全屏</p>
+					<div style="text-align: center;">
+						<img src="img/img03.jpg" width="750px" />
+					</div>
+				</div>
+			</div>
+		</div>
+		<div style="margin: 50px;font-size: 20px;">
+			<div style="width: 800px;margin: 0 auto;">
+				<div style="font-size: 30px;margin-bottom: 25px;">调用方法</div>
+				<div>
+					<p>方法一：</p>
+					<p>头部区域&lt;head&gt;中插入以下代码:</p>
+					<article style="display: flex;font-size: 16px;">
+						<div style="width: 35px;">
+							<code>
+								1<br />
+							</code>
+						</div>
+						<div style="flex: 1;">
+							<code>
+								&lt;script type="text/javascript" src="pjs/index.js"&gt;&lt;/script&gt;
+							</code>
+						</div>
+					</article>
+					<p>主体区域&lt;body&gt;插入插入以下代码:</p>
+					<article style="display: flex;font-size: 16px;">
+						<div style="width: 35px;">
+							<code>
+								1<br />
+								2<br />
+								3<br />
+								4<br />
+								5<br />
+								6<br />
+								7<br />
+								8<br />
+								9<br />
+								10<br />
+								11<br />
+								12<br />
+								13<br />
+							</code>
+						</div>
+						<div style="flex: 1;">
+							<code>
+								&lt;div id="player" style="margin: 0 auto;width: 800px;height: 600px;"&gt;&lt;/div&gt;<br />
+								&lt;script&gt;<br />
+								&nbsp;&nbsp;player = {<br />
+								&nbsp;&nbsp;&nbsp;&nbsp;noid: "视频ID",<br />
+								&nbsp;&nbsp;&nbsp;&nbsp;name: "视频标题",<br />
+								&nbsp;&nbsp;&nbsp;&nbsp;url: "视频路径",<br />
+								&nbsp;&nbsp;&nbsp;&nbsp;width: 视频宽度,<br />
+								&nbsp;&nbsp;&nbsp;&nbsp;height: 视频高度,<br />
+								&nbsp;&nbsp;&nbsp;&nbsp;viewWindow: "player",&nbsp;&nbsp;//播放视频的块区域ID<br />
+								&nbsp;&nbsp;&nbsp;&nbsp;centerPlayTimeBlockSwitch: true,&nbsp;&nbsp;//拖动时视频中央显示播放进度*<br />
+								&nbsp;&nbsp;&nbsp;&nbsp;autoplay: false&nbsp;&nbsp;//是否自动播放<br />
+								&nbsp;&nbsp;}<br />
+								&lt;/script&gt;<br />
+							</code>
+						</div>
+					</article>
+				</div>
+				<div>
+					<p>方法二:</p>
+					<p>
+						直接主体区域&lt;body&gt;插入插入以下代码:
+					</p>
+					<article style="display: flex;font-size: 16px;">
+						<div style="width: 35px;">
+							<code>
+								1<br />
+								2<br />
+								3<br />
+								4<br />
+								5<br />
+								6<br />
+								7<br />
+								8<br />
+								9<br />
+								10<br />
+								11<br />
+								12<br />
+								13<br />
+								14<br />
+							</code>
+						</div>
+						<div style="flex: 1;">
+							<code>
+								&lt;div id="player" style="margin: 0 auto;width: 800px;height: 600px;"&gt;&lt;/div&gt;<br />
+								&lt;script type="text/javascript" src="pjs/index.js"&gt;&lt;/script&gt;<br />
+								&lt;script&gt;<br />
+								&nbsp;&nbsp;player = {<br />
+								&nbsp;&nbsp;&nbsp;&nbsp;noid: "视频ID",<br />
+								&nbsp;&nbsp;&nbsp;&nbsp;name: "视频标题",<br />
+								&nbsp;&nbsp;&nbsp;&nbsp;url: "视频路径",<br />
+								&nbsp;&nbsp;&nbsp;&nbsp;width: 视频宽度,<br />
+								&nbsp;&nbsp;&nbsp;&nbsp;height: 视频高度,<br />
+								&nbsp;&nbsp;&nbsp;&nbsp;viewWindow: "player",&nbsp;&nbsp;//播放视频的块区域ID<br />
+								&nbsp;&nbsp;&nbsp;&nbsp;centerPlayTimeBlockSwitch: true,&nbsp;&nbsp;//拖动时视频中央显示播放进度*<br />
+								&nbsp;&nbsp;&nbsp;&nbsp;autoplay: false&nbsp;&nbsp;//是否自动播放<br />
+								&nbsp;&nbsp;}<br />
+								&lt;/script&gt;<br />
+							</code>
+						</div>
+					</article>
+					<p style="text-align: right;font-size: 10px;">
+						*注:已知在带有触摸屏功能的计算机上使用触屏拖动视频后会造成中心播放进度显示块无法自行消除。<br />
+						建议网页若运行在带有触摸屏功能的计算机上将centerPlayTimeBlockSwitch设置为false。
+					</p>
+				</div>
+			</div>
+		</div>
+		<div style="margin: 50px;font-size: 20px;">
+			<div style="width: 800px;margin: 0 auto;">
+				<p>
+					作者：Qisato<br />
+					邮箱：Qisato@126.com
+				</p>
+				<div style="text-align: center;font-size: 25px;">
+					<p>
+						程序源代码遵循MPL2.0开源协议，可以免费用于商业用途<br />
+						如若转载请注明出处
+					</p>
+				</div>
+			</div>
+		</div>
+		<div style="margin: 100px 0px 50px 0px;font-size: 20px;">
+			<div style="width: 800px;margin: 0 auto;">
+				<p>
+					恰饭：
+				</p>
+				<div style="width: 800px;display: flex;text-align: center;margin: 0 auto;">
+					<div style="flex: 1;">
+						<img src="img/img06.jpg" style="width: 200px;" />
+					</div>
+					<div style="flex: 1;">
+						<img src="img/img08.jpg" style="width: 200px;" />
+					</div>
+					<div style="flex: 1;">
+						<img src="img/img07.jpg" style="width: 200px;" />
+					</div>
+				</div>
+				<div style="text-align: center;font-size: 30px;">
+					<p>
+						可怜可怜 给点就行
+					</p>
+				</div>
+			</div>
+		</div>
+		<div style="text-align: right;margin: 20px 20px 0px 0px;font-size: 14px;">
+			<i>时间仓促，网页以后再改</i>
+		</div>
+	</body>
+</html>
