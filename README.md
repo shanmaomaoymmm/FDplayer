@@ -1,4 +1,4 @@
-# FDPlayer-Touchv9.0 
+# FDPlayer-Touch v9.0 
 ### 一个简洁的HTML播放器  
 ![输入图片描述](https://shanmaomaoymmm.github.io/shanmoamoaymmmProjectDeomMedia/FDPlayer-Touch/img/img02.jpg?v=1&type=image)  
   
