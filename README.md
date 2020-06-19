@@ -9,7 +9,7 @@
 >头部区域`<head>`中插入以下代码:  
 >  
 ```html
-<script type="text/javascript" src="pjs/index.js"></script>
+<script type="text/javascript" src="pjs/fdPlayerTouch.js"></script>
 ```
 >主体区域`<body>`插入插入以下代码:  
   
@@ -34,7 +34,7 @@
    
 ```html
 <div id="player" style="margin: 0 auto;width: 800px;height: 600px;"></div>  
-<script type="text/javascript" src="pjs/index.js"></script>  
+<script type="text/javascript" src="pjs/fdPlayerTouch.js"></script>  
 <script>  
 	player = {  
 		noid: "视频ID",  
