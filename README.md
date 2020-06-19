@@ -1,7 +1,7 @@
 ## FDPlayer-Touchv9.0
 
 一个简洁的HTML播放器
-![输入图片描述](img/img02.jpg?v=1&type=image)
+![输入图片描述](https://shanmaomaoymmm.github.io/shanmoamoaymmmProjectDeomMedia/FDPlayer-Touch/img/img02.jpg?v=1&type=image)
 支持Firefox&Chromium
 
 请全部下载后查看index.html
