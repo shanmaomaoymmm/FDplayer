@@ -57,4 +57,4 @@
 Deom地址：[https://shanmaomaoymmm.github.io/FDPlayer-Touch](https://shanmaomaoymmm.github.io/FDPlayer-Touch)
 
 恰饭  
-![[恰饭二维码](https://shanmaomaoymmm.github.io/shanmoamoaymmmProjectDeomMedia/FDPlayer-Touch/img/img09.jpg)](https://shanmaomaoymmm.github.io/shanmoamoaymmmProjectDeomMedia/FDPlayer-Touch/img/img09.jpg)
+![<https://shanmaomaoymmm.github.io/shanmoamoaymmmProjectDeomMedia/FDPlayer-Touch/img/img09.jpg>](https://shanmaomaoymmm.github.io/shanmoamoaymmmProjectDeomMedia/FDPlayer-Touch/img/img09.jpg)
