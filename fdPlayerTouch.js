@@ -53,7 +53,6 @@ function playVideo(width, height, vID, videoID, videoTimeID, playTimeID, timeBar
 	video.autoplay = autoplay;
 
 	var isTouchDevice = 'ontouchstart' in document.documentElement;
-	alert("触屏支持" + isTouchDevice);
 	if (isTouchDevice == true) {
 		centerPlayTimeBlockSwitch = false;
 	} else {
