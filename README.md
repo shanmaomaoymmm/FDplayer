@@ -27,7 +27,7 @@
 		centerPlayTimeBlockSwitch: true, //拖动时视频中央显示播放进度*  
 		autoplay: false //是否自动播放  
         }  
- </script>
+</script>
 ```
 > + 方法二：  
 >   
@@ -113,6 +113,7 @@ Support Firefox and Chromium
 		viewWindow: "player", //lock area ID for playing video  
 		centerPlayTimeBlockSwitch: true, //The playback progress is displayed in the center of the video when dragging*  
 		autoplay: false //Whether to play automatically  
+        }
 </script>
 ```
 <p align="right">
