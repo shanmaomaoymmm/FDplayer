@@ -1,4 +1,4 @@
-# FDPlayer-Touch v0.9.1 
+# FDplayer-Touch v0.9.1 
 ### 一个简洁的HTML播放器  
 ![下载后打开index.html查看Dome](https://shanmaomaoymmm.github.io/shanmoamoaymmmProjectDeomMedia/FDPlayer-Touch/img/img02.jpg)  
   
@@ -59,12 +59,12 @@ Deom地址：[https://shanmaomaoymmm.github.io/FDPlayer-Touch](https://shanmaoma
   
 邮箱：Qisato@126.com
 
-[恰饭](https://shanmaomaoymmm.github.io/shanmoamoaymmmProjectDeomMedia/FDPlayer-Touch/img/img09.jpg)  
+[恰饭](https://shanmaomaoymmm.github.io/shanmoamoaymmmProjectDeomMedia/FDplayer-Touch/img/img09.jpg)  
 ![↑恰饭二维码加载不出来点上方蓝字](https://shanmaomaoymmm.github.io/shanmoamoaymmmProjectDeomMedia/FDPlayer-Touch/img/img09.jpg)
 ***
 ***
 ***
-# FDPlayer-Touch v0.9.1 
+# FDplayer-Touch v0.9.1 
 ### A concise HTML player  
 (machine translation)  
 ![Open index.html after download to view Dome](https://shanmaomaoymmm.github.io/shanmoamoaymmmProjectDeomMedia/FDPlayer-Touch/img/img02.jpg)  
@@ -122,7 +122,7 @@ Support Firefox and Chromium
 </font>
 </p>
 
-Deom address：[https://shanmaomaoymmm.github.io/FDPlayer-Touch](https://shanmaomaoymmm.github.io/FDPlayer-Touch)  
+Deom address：[https://shanmaomaoymmm.github.io/FDplayer-Touch](https://shanmaomaoymmm.github.io/FDPlayer-Touch)  
   
 Email：Qisato@126.com
 
