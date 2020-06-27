@@ -1,4 +1,4 @@
-# FDPlayer-Touch v0.9 
+# FDPlayer-Touch v0.9.1 
 ### 一个简洁的HTML播放器  
 ![下载后打开index.html查看Dome](https://shanmaomaoymmm.github.io/shanmoamoaymmmProjectDeomMedia/FDPlayer-Touch/img/img02.jpg)  
   
@@ -64,7 +64,7 @@ Deom地址：[https://shanmaomaoymmm.github.io/FDPlayer-Touch](https://shanmaoma
 ***
 ***
 ***
-# FDPlayer-Touch v0.9 
+# FDPlayer-Touch v0.9.1 
 ### A concise HTML player  
 (machine translation)  
 ![Open index.html after download to view Dome](https://shanmaomaoymmm.github.io/shanmoamoaymmmProjectDeomMedia/FDPlayer-Touch/img/img02.jpg)  
