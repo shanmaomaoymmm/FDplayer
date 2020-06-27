@@ -1,11 +1,11 @@
-# FDPlayer-Touch v9.0 
+# FDPlayer-Touch v0.9 
 ### 一个简洁的HTML播放器  
 ![下载后打开index.html查看Dome](https://shanmaomaoymmm.github.io/shanmoamoaymmmProjectDeomMedia/FDPlayer-Touch/img/img02.jpg)  
   
 支持Firefox&Chromium  
   
 >### 调用方法
->+ 方法一：
+>+ 方法一：  
 >头部区域`<head>`中插入以下代码:  
 >  
 ```html
@@ -63,13 +63,7 @@ Deom地址：[https://shanmaomaoymmm.github.io/FDPlayer-Touch](https://shanmaoma
 ***
 ***
 ***
-***
-***
-***
-***
-***
-***
-# FDPlayer-Touch v9.0 
+# FDPlayer-Touch v0.9 
 ### A concise HTML player  
 (machine translation)  
 ![Open index.html after download to view Dome](https://shanmaomaoymmm.github.io/shanmoamoaymmmProjectDeomMedia/FDPlayer-Touch/img/img02.jpg)  
@@ -77,7 +71,7 @@ Deom地址：[https://shanmaomaoymmm.github.io/FDPlayer-Touch](https://shanmaoma
 Support Firefox and Chromium  
   
 >### Call method
->+ Method 1：
+>+ Method 1:  
 >Insert the following code in the head area `<head>`:  
 >  
 ```html
