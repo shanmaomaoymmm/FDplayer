@@ -55,7 +55,7 @@
 </font>
 </p>
 
-Deom地址：[https://shanmaomaoymmm.github.io/FDPlayer-Touch](https://shanmaomaoymmm.github.io/FDPlayer-Touch)  
+Deom地址：[https://shanmaomaoymmm.github.io/FDplayer-Touch](https://shanmaomaoymmm.github.io/FDPlayer-Touch)  
   
 邮箱：Qisato@126.com
 
@@ -122,7 +122,7 @@ Support Firefox and Chromium
 </font>
 </p>
 
-Deom address：[https://shanmaomaoymmm.github.io/FDplayer-Touch](https://shanmaomaoymmm.github.io/FDPlayer-Touch)  
+Deom address：[https://shanmaomaoymmm.github.io/FDplayer-Touch](https://shanmaomaoymmm.github.io/FDplayer-Touch)  
   
 Email：Qisato@126.com
 
