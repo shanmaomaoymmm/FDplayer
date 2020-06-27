@@ -6,6 +6,7 @@
   
 >### 调用方法
 >+ 方法一：  
+>  
 >头部区域`<head>`中插入以下代码:  
 >  
 ```html
@@ -30,7 +31,7 @@
 ```
 > + 方法二：  
 >   
-> 直接主体区域`<body>`插入插入以下代码：
+>直接主体区域`<body>`插入插入以下代码：
    
 ```html
 <div id="player" style="margin: 0 auto;width: 800px;height: 600px;"></div>  
@@ -71,7 +72,8 @@ Deom地址：[https://shanmaomaoymmm.github.io/FDPlayer-Touch](https://shanmaoma
 Support Firefox and Chromium  
   
 >### Call method
->+ Method 1:  
+> + Method 1:  
+>  
 >Insert the following code in the head area `<head>`:  
 >  
 ```html
