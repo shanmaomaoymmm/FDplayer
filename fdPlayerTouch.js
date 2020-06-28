@@ -317,7 +317,7 @@ function playVideo(width, height, vID, videoID, videoTimeID, playTimeID, timeBar
 
 	function startHidePlayerBar() {
 		if (video.paused == false) {
-			viewHidePlayerBar = setTimeout(hidePlayerBar, 5000);
+			viewHidePlayerBar = setTimeout(hidePlayerBar, 3000);
 		}
 	}
 
