@@ -48,6 +48,7 @@
 			name: "Hanser-舞池之实",
 			url: "https://shanmaomaoymmm.github.io/shanmoamoaymmmProjectDeomMedia/FDPlayer-Touch/video/video.mp4",
 			// url:"../shanmoamoaymmmProjectDeomMedia/FDPlayer-Touch/video/video.mp4",
+			img: "https://shanmaomaoymmm.github.io/shanmoamoaymmmProjectDeomMedia/FDPlayer-Touch/img/img10.jpg",
 			width: 800,
 			height: 600,
 			viewWindow: "player",
@@ -91,9 +92,10 @@
 				</div>
 			</div>
 			<div style="text-align: right;font-size: 10px;">
-				*注：①不支持各系列IE浏览器，如果在IE浏览器使用本播放器，可能会造成部分功能无法使用。<br/>
-				②仅支持能够支持HTML5及JavaScript脚本的新版Gecko和Webkit内核的浏览器，如果使用其他浏览器可能会造成显示异常。<br/>
-				如不能正常显示，请更新您的浏览器。
+				*注：①不支持各系列IE浏览器，如果在IE浏览器使用本播放器，可能会造成部分功能无法使用。<br />
+				②仅支持能够支持HTML5及JavaScript脚本的新版Gecko和Webkit内核的浏览器，如果使用其他浏览器可能会造成显示异常。<br />
+				如不能正常显示，请更换您的浏览器。非专业用户推荐使用<a style="color: #424242;"
+					href="http://down.360safe.com/cse/360cse_12.0.1412.0.exe">360极速浏览器</a>。
 			</div>
 		</div>
 	</div>
@@ -116,7 +118,7 @@
 					</div>
 				</article>
 				<p>主体区域&lt;body&gt;插入插入以下代码:</p>
-				<article style="display: flex;font-size: 16px;">
+				<article style="display: flex;">
 					<div style="width: 35px;">
 						<code style="font-size: 16px;">
 								1<br />
@@ -132,16 +134,18 @@
 								11<br />
 								12<br />
 								13<br />
+								14<br />
 							</code>
 					</div>
 					<div style="flex: 1;">
 						<code style="font-size: 16px;">
-								&lt;div id="player" style="margin: 0 auto;width: 800px;height: 600px;"&gt;&lt;/div&gt;<br />
+								&lt;script type="text/javascript" src="fdPlayerTouch.js"&gt;&lt;/script&gt;<br />
 								&lt;script&gt;<br />
 								&nbsp;&nbsp;player = {<br />
 								&nbsp;&nbsp;&nbsp;&nbsp;noid: "视频ID",<br />
 								&nbsp;&nbsp;&nbsp;&nbsp;name: "视频标题",<br />
 								&nbsp;&nbsp;&nbsp;&nbsp;url: "视频路径",<br />
+								&nbsp;&nbsp;&nbsp;&nbsp;img: "视频预览图路径",<br />
 								&nbsp;&nbsp;&nbsp;&nbsp;width: 视频宽度,<br />
 								&nbsp;&nbsp;&nbsp;&nbsp;height: 视频高度,<br />
 								&nbsp;&nbsp;&nbsp;&nbsp;viewWindow: "player",&nbsp;&nbsp;//播放视频的块区域ID<br />
@@ -175,6 +179,7 @@
 								12<br />
 								13<br />
 								14<br />
+								15<br />
 							</code>
 					</div>
 					<div style="flex: 1;">
@@ -186,6 +191,7 @@
 								&nbsp;&nbsp;&nbsp;&nbsp;noid: "视频ID",<br />
 								&nbsp;&nbsp;&nbsp;&nbsp;name: "视频标题",<br />
 								&nbsp;&nbsp;&nbsp;&nbsp;url: "视频路径",<br />
+								&nbsp;&nbsp;&nbsp;&nbsp;url: "视频预览图路径",<br />
 								&nbsp;&nbsp;&nbsp;&nbsp;width: 视频宽度,<br />
 								&nbsp;&nbsp;&nbsp;&nbsp;height: 视频高度,<br />
 								&nbsp;&nbsp;&nbsp;&nbsp;viewWindow: "player",&nbsp;&nbsp;//播放视频的块区域ID<br />

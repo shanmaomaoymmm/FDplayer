@@ -21,10 +21,11 @@
 		noid: "视频ID",  
 		name: "视频标题",  
 		url: "视频路径",  
+		img:"视频预览图路径",  
 		width: 视频宽度,  
 		height: 视频高度,  
 		viewWindow: "player", //播放视频的块区域ID  
-		centerPlayTimeBlockSwitch: true, //拖动时视频中央显示播放进度*  
+		centerPlayTimeBlockSwitch: true, //拖动时视频中央显示播放进度  
 		autoplay: false //是否自动播放  
         }  
 </script>
@@ -40,7 +41,8 @@
 	player = {  
 		noid: "视频ID",  
 		name: "视频标题",  
-		url: "视频路径",  
+		url: "视频路径", 
+		img:"视频预览图路径",   
 		width: 视频宽度,  
 		height: 视频高度,  
 		viewWindow: "player", //播放视频的块区域ID  
@@ -49,11 +51,6 @@
 	}  
 </script>
 ```
-<p align="right">
-<font size=1>
-*注:已知在带有触摸屏功能的计算机上使用触屏拖动视频后会造成中心播放进度显示块无法自行消除。建议网页若运行在带有触摸屏功能的计算机上将centerPlayTimeBlockSwitch设置为false。
-</font>
-</p>
 
 Deom地址：[https://shanmaomaoymmm.github.io/FDplayer-Touch](https://shanmaomaoymmm.github.io/FDplayer-Touch)  
   
@@ -87,11 +84,12 @@ Support Firefox and Chromium
 	player = {  
 		noid: "Video ID",  
 		name: "Video Title",  
-		url: "Video Path",  
+		url: "Video Path",
+		img:"Video Preview Image Path",    
 		width: video width,  
 		height: video height,  
 		viewWindow: "player", //lock area ID for playing video  
-		centerPlayTimeBlockSwitch: true, //The playback progress is displayed in the center of the video when dragging*  
+		centerPlayTimeBlockSwitch: true, //The playback progress is displayed in the center of the video when dragging  
 		autoplay: false //Whether to play automatically  
         }  
  </script>
@@ -108,6 +106,7 @@ Support Firefox and Chromium
 		noid: "Video ID",  
 		name: "Video Title",  
 		url: "Video Path",  
+		img:"Video Preview Image Path",    
 		width: video width,  
 		height: video height,  
 		viewWindow: "player", //lock area ID for playing video  
@@ -116,11 +115,6 @@ Support Firefox and Chromium
         }
 </script>
 ```
-<p align="right">
-<font size=1>
-*Note: It is known that dragging a video with a touch screen on a computer with a touch screen function will cause the center playback progress display block to be eliminated by itself. It is recommended to set centerPlayTimeBlockSwitch to false if the webpage is running on a computer with a touch screen function.
-</font>
-</p>
 
 Deom address：[https://shanmaomaoymmm.github.io/FDplayer-Touch](https://shanmaomaoymmm.github.io/FDplayer-Touch)  
   
