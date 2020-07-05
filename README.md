@@ -10,7 +10,7 @@
 >头部区域`<head>`中插入以下代码:  
 >  
 ```html
-<script type="text/javascript" src="pjs/fdPlayerTouch.js"></script>
+<script type="text/javascript" src="fdPlayerTouch.js"></script>
 ```
 >主体区域`<body>`插入插入以下代码:  
   
@@ -36,7 +36,7 @@
    
 ```html
 <div id="player" style="margin: 0 auto;width: 800px;height: 600px;"></div>  
-<script type="text/javascript" src="pjs/fdPlayerTouch.js"></script>  
+<script type="text/javascript" src="fdPlayerTouch.js"></script>  
 <script>  
 	player = {  
 		noid: "视频ID",  
@@ -74,7 +74,7 @@ Support Firefox and Chromium
 >Insert the following code in the head area `<head>`:  
 >  
 ```html
-<script type="text/javascript" src="pjs/fdPlayerTouch.js"></script>
+<script type="text/javascript" src="fdPlayerTouch.js"></script>
 ```
 >Body area `<body>` insert insert the following code:  
   
@@ -100,7 +100,7 @@ Support Firefox and Chromium
    
 ```html
 <div id="player" style="margin: 0 auto;width: 800px;height: 600px;"></div>  
-<script type="text/javascript" src="pjs/fdPlayerTouch.js"></script>  
+<script type="text/javascript" src="fdPlayerTouch.js"></script>  
 <script>  
 	player = {  
 		noid: "Video ID",  
