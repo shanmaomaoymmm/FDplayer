@@ -202,6 +202,53 @@
 							</code>
 					</div>
 				</article>
+			</div>
+			<div>
+				<p>方法三（不稳定，无需下载，适合使用Github Page搭建的网页）:</p>
+				<p>
+					直接主体区域&lt;body&gt;插入插入以下代码:
+				</p>
+				<article style="display: flex;">
+					<div style="width: 35px;">
+						<code style="font-size: 16px;">
+								1<br />
+								2<br />
+								 <br />
+								3<br />
+								4<br />
+								5<br />
+								6<br />
+								7<br />
+								8<br />
+								9<br />
+								10<br />
+								11<br />
+								12<br />
+								13<br />
+								14<br />
+								15<br />
+							</code>
+					</div>
+					<div style="flex: 1;">
+						<code style="font-size: 16px;">
+								&lt;div id="player" style="margin: 0 auto;width: 800px;height: 600px;"&gt;&lt;/div&gt;<br />
+								&lt;script type="text/javascript" src="https://shanmaomaoymmm.github.io/FDplayer-Touch/fdPlayerTouch.js"&gt;&lt;/script&gt;<br />
+								&lt;script&gt;<br />
+								&nbsp;&nbsp;player = {<br />
+								&nbsp;&nbsp;&nbsp;&nbsp;noid: "视频ID",<br />
+								&nbsp;&nbsp;&nbsp;&nbsp;name: "视频标题",<br />
+								&nbsp;&nbsp;&nbsp;&nbsp;url: "视频路径",<br />
+								&nbsp;&nbsp;&nbsp;&nbsp;url: "视频预览图路径",<br />
+								&nbsp;&nbsp;&nbsp;&nbsp;width: 视频宽度,<br />
+								&nbsp;&nbsp;&nbsp;&nbsp;height: 视频高度,<br />
+								&nbsp;&nbsp;&nbsp;&nbsp;viewWindow: "player",&nbsp;&nbsp;//播放视频的块区域ID<br />
+								&nbsp;&nbsp;&nbsp;&nbsp;centerPlayTimeBlockSwitch: true,&nbsp;&nbsp;//拖动时视频中央显示播放进度*<br />
+								&nbsp;&nbsp;&nbsp;&nbsp;autoplay: false&nbsp;&nbsp;//是否自动播放<br />
+								&nbsp;&nbsp;}<br />
+								&lt;/script&gt;<br />
+							</code>
+					</div>
+				</article>
 				<p style="text-align: right;font-size: 10px;">
 					*注:已知在带有触摸屏功能的计算机上使用触屏拖动视频后会造成中心播放进度显示块无法自行消除。<br />
 					建议网页若运行在带有触摸屏功能的计算机上将centerPlayTimeBlockSwitch设置为false。
