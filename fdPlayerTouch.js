@@ -27,6 +27,8 @@ function playVideo(width, height, vID, videoID, videoTimeID, playTimeID, timeBar
 	fullScreenblockID, centerPlayTimeBlockSwitch, autoplay, url, ie, volumeSetBarOutID, videoPreviewImgID) {
 	var fullScreenState = false;
 	var viewHidePlayerBar;
+	var playBarDisplay=true;
+	var clickTimer=null;
 
 	var block = document.getElementById(blockID);
 	var v = document.getElementById(vID);
@@ -57,6 +59,12 @@ function playVideo(width, height, vID, videoID, videoTimeID, playTimeID, timeBar
 	var fullScreenblock = document.getElementById(fullScreenblockID);
 	var volumeSetBarOut = document.getElementById(volumeSetBarOutID);
 	var videoPreviewImg = document.getElementById(videoPreviewImgID);
+	
+	var screenWidth=window.screen.width;
+	var screenHeight=window.screen.height;
+	
+	console.log(screenWidth);
+	console.log(screenHeight);
 
 	if (ie == true) {
 		fullScreenblock.display = "none";
@@ -112,7 +120,7 @@ function playVideo(width, height, vID, videoID, videoTimeID, playTimeID, timeBar
 		playTime.innerHTML = setTimeFormat(video.currentTime);
 		videoTime.innerHTML = setTimeFormat(video.duration - video.currentTime);
 		timeBar.value = video.currentTime / video.duration * 1024;
-		timeBarPlay.style.width = (timeBar.value / 1024 * (timeBar.clientWidth - 16)) + "px";
+		timeBarPlay.style.width = (timeBar.value / 1024 * (timeBar.clientWidth - 14)) + "px";
 		setTimeBarButton.style.left = (timeBar.value / 1024 * (timeBar.clientWidth - 16)) + "px";
 	}
 
@@ -122,21 +130,28 @@ function playVideo(width, height, vID, videoID, videoTimeID, playTimeID, timeBar
 			centerPlayTime.style.opacity = "1";
 		}
 		video.currentTime = timeBar.value / 1024 * video.duration;
-		timeBarPlay.style.width = (timeBar.value / 1024 * (timeBar.clientWidth - 16)) + "px";
+		timeBarPlay.style.width = (timeBar.value / 1024 * (timeBar.clientWidth - 14)) + "px";
 		setTimeBarButton.style.left = (timeBar.value / 1024 * (timeBar.clientWidth - 16)) + "px";
 		playTime.innerHTML = setTimeFormat(video.currentTime);
 		centerPlayTimeText.innerHTML = setTimeFormat(video.currentTime);
+		videoTime.innerHTML = setTimeFormat(video.duration - video.currentTime);
 	}
 	timeBar.onmouseup = function () {
 		centerPlayTime.style.opacity = "0";
 	}
+	timeBar.ontouchstart=function(){
+		centerPlayTime.style.opacity = "1";
+	}
+	timeBar.ontouchend=function(){
+		centerPlayTime.style.opacity = "0";
+	}
+	
 	window.onkeyup = function () {
 		var e = event.which;
 		if (e == 37 || e == 39) {
 			centerPlayTime.style.opacity = "0";
 		}
 	}
-
 
 	setVolumeBar();
 	volumeBar.oninput = function () {
@@ -159,6 +174,12 @@ function playVideo(width, height, vID, videoID, videoTimeID, playTimeID, timeBar
 		setVolumeButtonDisplay();
 	}
 	volumeBar.onmouseup = function () {
+		centerPlayTime.style.opacity = "0";
+	}
+	volumeBar.ontouchstart=function(){
+		centerPlayTime.style.opacity = "1";
+	}
+	volumeBar.ontouchend=function(){
 		centerPlayTime.style.opacity = "0";
 	}
 
@@ -273,19 +294,54 @@ function playVideo(width, height, vID, videoID, videoTimeID, playTimeID, timeBar
 		}
 	}
 
-	function upVolume() {
-
-	}
-
-	function downVolume() {
-
-	}
 	video.onended = function () {
-		// videoPauseButton.style.backgroundImage = "url(psvg/play.svg)";
 		videoPauseButtonSetPlay();
 		appearPlayBar();
 	}
-
+/**************触屏**************/
+	var touchx=0;
+	var touchVideoTime;
+	document.addEventListener("touchstart",touchSetVideoTimeStart,false);
+	document.addEventListener("touchmove",touchSetVideoTimeMove,false);
+	document.addEventListener("touchend",touchSetVideoTimeEnd,false);
+	function touchSetVideoTimeStart(event){
+		if(fullScreenState==true){
+			touchx=event.touches[0].screenX;
+			touchVideoTime=video.currentTime;
+		}
+	}
+	function touchSetVideoTimeMove(event){
+		if(fullScreenState==true){
+			centerPlayTime.style.opacity="1";
+			video.currentTime=touchVideoTime+(event.touches[0].screenX-touchx)/5;
+			if(touchVideoTime+(event.touches[0].screenX-touchx)/5<0){
+				centerPlayTimeText.innerHTML = setTimeFormat(0);
+				playTime.innerHTML = setTimeFormat(0);
+				timeBarPlay.style.width = 0;
+				setTimeBarButton.style.left = 0;
+				videoTime.innerHTML = setTimeFormat(video.duration);
+			}else if(touchVideoTime+(event.touches[0].screenX-touchx)/5>=video.duration){
+				centerPlayTimeText.innerHTML = setTimeFormat(video.duration);
+				videoTime.innerHTML = setTimeFormat(0);
+				playTime.innerHTML = setTimeFormat(video.duration);
+				timeBarPlay.style.width = (timeBar.clientWidth - 16) + "px";
+				setTimeBarButton.style.left = (timeBar.clientWidth - 16) + "px";
+			}else{
+				centerPlayTimeText.innerHTML = setTimeFormat(touchVideoTime+(event.touches[0].screenX-touchx)/5);
+				videoTime.innerHTML = setTimeFormat(video.duration - (touchVideoTime+(event.touches[0].screenX-touchx)/5));
+				playTime.innerHTML = setTimeFormat(touchVideoTime+(event.touches[0].screenX-touchx)/5);
+				timeBarPlay.style.width = ((touchVideoTime+(event.touches[0].screenX-touchx)/5) / video.duration * (timeBar.clientWidth - 14)) + "px";
+				setTimeBarButton.style.left = ((touchVideoTime+(event.touches[0].screenX-touchx)/5) / video.duration * (timeBar.clientWidth - 16)) + "px";
+			}
+		}
+	}
+	function touchSetVideoTimeEnd(event){
+		if(fullScreenState==true){
+			touchx=0;
+			centerPlayTime.style.opacity="0";
+		}
+	}
+/*******************************/
 	var speedButtonStatus = false;
 	speedButton.onclick = function () {
 		if (isTouchDevice == true) {
@@ -376,7 +432,11 @@ function playVideo(width, height, vID, videoID, videoTimeID, playTimeID, timeBar
 		if (document.fullscreenElement) {
 			fullScreenState = true;
 			fullScreenButtonViewSetOutFullScreen();
-			centerPlayTime.style.top = 200 + "px";
+			if(isTouchDevice==true){
+				centerPlayTime.style.top = 100 + "px";
+			}else{
+				centerPlayTime.style.top = 200 + "px";
+			}
 			pauseBlock.style.height = window.screen.height / 2 + "px";
 			fullScreenblock.style.height = window.screen.height / 2 + "px";
 		} else {
@@ -412,57 +472,85 @@ function playVideo(width, height, vID, videoID, videoTimeID, playTimeID, timeBar
 	viewPlayerNameBar.onmouseout = function () {
 		startHidePlayerBar();
 	}
-
-	function startHidePlayerBar() {
+//定时隐藏控制栏及标题栏
+	function startHidePlayerBar(t) {
+		var t=arguments[0] ? arguments[0] : 3000
 		if (video.paused == false) {
-			viewHidePlayerBar = setTimeout(hidePlayerBar, 3000);
+			viewHidePlayerBar = setTimeout(hidePlayerBar, t);
 		}
 	}
 
+//隐藏控制栏和标题栏
 	function hidePlayerBar() {
 		playerCtrlBar.style.opacity = "0";
 		playerNameBar.style.opacity = "0";
 		playerCtrlBar.style.pointerEvents = "none";
 		playerNameBar.style.pointerEvents = "none";
+		playBarDisplay=false;
 	}
-
+//显示控制栏和标题栏
 	function appearPlayBar() {
 		playerCtrlBar.style.opacity = "1";
 		playerNameBar.style.opacity = "1";
 		playerCtrlBar.style.pointerEvents = "auto";
 		playerNameBar.style.pointerEvents = "auto";
+		playBarDisplay=true;
 	}
-
+//双击控制块
 	pauseBlock.ondblclick = function () {
 		pause();
 		clearTimeout(viewHidePlayerBar);
+		if (clickTimer) {
+			clearTimeout(clickTimer);
+			clickTimer = null;
+		}
 	}
 	fullScreenblock.ondblclick = function () {
 		fullScreenS();
 		startHidePlayerBar();
-	}
-	pauseBlock.onclick = function () {
 		clearTimeout(viewHidePlayerBar);
-		appearPlayBar();
-		startHidePlayerBar();
-		centerPlayTime.style.opacity = "0";
+		if (clickTimer) {
+			clearTimeout(clickTimer);
+			clickTimer = null;
+		}
+	}
+//单击控制块时执行
+	pauseBlock.onclick = function () {
+		if (clickTimer) {
+			clearTimeout(clickTimer);
+			clickTimer = null;
+		}
+		clickTimer = setTimeout(function(){
+			clearTimeout(viewHidePlayerBar);
+			centerPlayTime.style.opacity = "0";
+			if(playBarDisplay==true){
+				hidePlayerBar();
+			}else if(playBarDisplay==false){
+				appearPlayBar();
+				startHidePlayerBar(5000);
+			}else{}
+		},400);
 	}
 	fullScreenblock.onclick = function () {
-		clearTimeout(viewHidePlayerBar);
-		appearPlayBar();
-		startHidePlayerBar();
-		centerPlayTime.style.opacity = "0";
+		if (clickTimer) {
+			clearTimeout(clickTimer);
+			clickTimer = null;
+		}
+		clickTimer = setTimeout(function(){
+			clearTimeout(viewHidePlayerBar);
+			centerPlayTime.style.opacity = "0";
+			if(playBarDisplay==true){
+				hidePlayerBar();
+			}else if(playBarDisplay==false){
+				appearPlayBar();
+				startHidePlayerBar(5000);
+			}else{}
+		},400);
 	}
-	pauseBlock.onmousemove = function () {
-		clearTimeout(viewHidePlayerBar);
-		appearPlayBar();
-		startHidePlayerBar();
-	}
-	fullScreenblock.onmousemove = function () {
-		clearTimeout(viewHidePlayerBar);
-		appearPlayBar();
-		startHidePlayerBar();
-	}
+	
+	pauseBlock.ontouchstart=function(){}
+	fullScreenblock.ontouchstart=function(){}
+	
 	pauseBlock.onmouseout = function () {
 		clearTimeout(viewHidePlayerBar);
 		startHidePlayerBar();
