@@ -56,8 +56,8 @@ Deom地址：[https://shanmaomaoymmm.github.io/FDplayer-Touch](https://shanmaoma
   
 邮箱：Qisato@126.com
 
-[恰饭](https://shanmaomaoymmm.github.io/shanmoamoaymmmProjectDeomMedia/FDplayer-Touch/img/img09.jpg)  
-![↑恰饭二维码加载不出来点上方蓝字](https://shanmaomaoymmm.github.io/shanmoamoaymmmProjectDeomMedia/FDPlayer-Touch/img/img09.jpg)
+<!-- [恰饭](https://shanmaomaoymmm.github.io/shanmoamoaymmmProjectDeomMedia/FDplayer-Touch/img/img09.jpg)  
+![↑恰饭二维码加载不出来点上方蓝字](https://shanmaomaoymmm.github.io/shanmoamoaymmmProjectDeomMedia/FDPlayer-Touch/img/img09.jpg) -->
 ***
 ***
 ***
@@ -120,5 +120,5 @@ Deom address：[https://shanmaomaoymmm.github.io/FDplayer-Touch](https://shanmao
   
 Email：Qisato@126.com
 
-[Donation](https://shanmaomaoymmm.github.io/shanmoamoaymmmProjectDeomMedia/FDPlayer-Touch/img/img09.jpg)  
-![↑Donation QR code can not be loaded out of the blue word above the point](https://shanmaomaoymmm.github.io/shanmoamoaymmmProjectDeomMedia/FDPlayer-Touch/img/img09.jpg)
+<!-- [Donation](https://shanmaomaoymmm.github.io/shanmoamoaymmmProjectDeomMedia/FDPlayer-Touch/img/img09.jpg)  
+![↑Donation QR code can not be loaded out of the blue word above the point](https://shanmaomaoymmm.github.io/shanmoamoaymmmProjectDeomMedia/FDPlayer-Touch/img/img09.jpg) -->
