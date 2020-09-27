@@ -4,7 +4,7 @@
 <head>
 	<meta charset="utf-8">
 	<title>FDplayer</title>
-	<script type="text/javascript" src="fdPlayerTouch.js"></script>
+	<script type="text/javascript" src="fdPlayer.js"></script>
 	<style type="text/css">
 		code {
 			color: #808080;
@@ -32,28 +32,60 @@
 			document.documentElement.style.fontSize = originRootFontSize * scaleFactor * scaleFactor + 'px';
 		})();
 	</script>
-	<div style="text-align: center;font-size: 40px;margin: 20px;color: navy;"><b>FDplayer-Touch v0.9.1</b></div>
+	<div style="text-align: center;font-size: 40px;margin: 20px;color: navy;"><b>FDplayer v0.10.0</b></div>
 	<div style="text-align: center;font-size: 30px;margin: 25px 0px 5px 0px;">一个简洁的H5播放器</div>
 	<div style="text-align: center;font-size: 16px">适用于Firefox&Chromium</div>
 	<div style="font-size: 25px;margin: 50px 0px 20px 0px;">
 		<div style="width: 800px;margin: 0 auto;">演示视频：Hanser-舞池之实.mp4</div>
 	</div>
-	<div id="player"
-		style="overflow: hidden;border-radius:5px; margin: 0 auto;width: 800px;height: 600px;box-shadow:0px 0px 5px rgba(0,0,0,0.5);background-color: rgba(0,0,0,0.5);">
+	<div id="player" style="overflow: hidden;border-radius:5px; margin: 0 auto;width: 800px;height: 600px;box-shadow:0px 0px 5px rgba(0,0,0,0.5);background-color: rgba(0,0,0,0.5);">
 	</div>
-
 	<script>
 		player = {
-			noid: "10086",
-			name: "Hanser-舞池之实",
-			url: "https://shanmaomaoymmm.github.io/shanmoamoaymmmProjectDeomMedia/FDPlayer-Touch/video/video.mp4",
-			//url:"video.mp4",
-			img: "https://shanmaomaoymmm.github.io/shanmoamoaymmmProjectDeomMedia/FDPlayer-Touch/img/img10.jpg",
 			width: 800,
 			height: 600,
 			viewWindow: "player",
-			centerPlayTimeBlockSwitch: true,
-			autoplay: false
+			img: "img10.jpg",
+			video:[
+				{
+					defaultID:1
+				},
+				{
+					name: "Hanser-舞池之实",
+					url:"https://shanmaomaoymmm.github.io/shanmoamoaymmmProjectDeomMedia/FDPlayer-Touch/video/video-zh.mp4",
+					subtitles:[
+						{
+							defaultID:1
+						},{
+							name:"中文",
+							url:"https://shanmaomaoymmm.github.io/shanmoamoaymmmProjectDeomMedia/FDPlayer-Touch/video/video-zh.vtt"
+						},{
+							name:"日语",
+							url:"https://shanmaomaoymmm.github.io/shanmoamoaymmmProjectDeomMedia/FDPlayer-Touch/video/video-ja.vtt"
+						},{
+							name:"English",
+							url:"https://shanmaomaoymmm.github.io/shanmoamoaymmmProjectDeomMedia/FDPlayer-Touch/video/video-en.vtt"
+						}
+					]
+				},{
+					name: "ダンスフロアの果実",
+					url:"https://shanmaomaoymmm.github.io/shanmoamoaymmmProjectDeomMedia/FDPlayer-Touch/video/video-ja.mp4",
+					subtitles:[
+						{
+							defaultID:2
+						},{
+							name:"中文",
+							url:"https://shanmaomaoymmm.github.io/shanmoamoaymmmProjectDeomMedia/FDPlayer-Touch/video/video-zh.vtt"
+						},{
+							name:"日语",
+							url:"https://shanmaomaoymmm.github.io/shanmoamoaymmmProjectDeomMedia/FDPlayer-Touch/video/video-ja.vtt"
+						},{
+							name:"English",
+							url:"https://shanmaomaoymmm.github.io/shanmoamoaymmmProjectDeomMedia/FDPlayer-Touch/video/video-en.vtt"
+						}
+					]
+				}
+			],
 		}
 	</script>
 
@@ -92,7 +124,7 @@
 				</div>
 			</div>
 			<div style="text-align: right;font-size: 10px;">
-				*注：①不支持各系列IE浏览器，如果在IE浏览器使用本播放器，可能会造成部分功能无法使用。<br />
+				*注：①不支持各系列IE浏览器。<br />
 				②仅支持能够支持HTML5及JavaScript脚本的新版Gecko和Webkit内核的浏览器，如果使用其他浏览器可能会造成显示异常。<br />
 				如不能正常显示，请更换您的浏览器。非专业用户推荐使用<a style="color: #424242;"
 					href="http://down.360safe.com/cse/360cse_12.0.1412.0.exe">360极速浏览器</a>。
@@ -113,7 +145,7 @@
 					</div>
 					<div style="flex: 1;">
 						<code style="font-size: 16px;">
-								&lt;script type="text/javascript" src="fdPlayerTouch.js"&gt;&lt;/script&gt;
+								&lt;script type="text/javascript" src="fdPlayer.js"&gt;&lt;/script&gt;
 							</code>
 					</div>
 				</article>
@@ -135,22 +167,44 @@
 								12<br />
 								13<br />
 								14<br />
+								15<br />
+								16<br />
+								17<br />
+								18<br />
+								19<br />
+								20<br />
+								21<br />
+								22<br />
+								23<br />
+								24<br />
+								25<br />
 							</code>
 					</div>
 					<div style="flex: 1;">
 						<code style="font-size: 16px;">
-								&lt;script type="text/javascript" src="fdPlayerTouch.js"&gt;&lt;/script&gt;<br />
+								&lt;script type="text/javascript" src="fdPlayer.js"&gt;&lt;/script&gt;<br />
 								&lt;script&gt;<br />
 								&nbsp;&nbsp;player = {<br />
-								&nbsp;&nbsp;&nbsp;&nbsp;noid: "视频ID",<br />
-								&nbsp;&nbsp;&nbsp;&nbsp;name: "视频标题",<br />
-								&nbsp;&nbsp;&nbsp;&nbsp;url: "视频路径",<br />
-								&nbsp;&nbsp;&nbsp;&nbsp;img: "视频预览图路径",<br />
 								&nbsp;&nbsp;&nbsp;&nbsp;width: 视频宽度,<br />
 								&nbsp;&nbsp;&nbsp;&nbsp;height: 视频高度,<br />
 								&nbsp;&nbsp;&nbsp;&nbsp;viewWindow: "player",&nbsp;&nbsp;//播放视频的块区域ID<br />
-								&nbsp;&nbsp;&nbsp;&nbsp;centerPlayTimeBlockSwitch: true,&nbsp;&nbsp;//拖动时视频中央显示播放进度*<br />
-								&nbsp;&nbsp;&nbsp;&nbsp;autoplay: false&nbsp;&nbsp;//是否自动播放<br />
+								&nbsp;&nbsp;&nbsp;&nbsp;img: "视频预览图路径",<br />
+								&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;video:[<br />
+								&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{<br />
+								&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;defaultID:默认从第几个文件开始播放<br />
+								&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;},{<br />
+								&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;name: "视频名称",<br />
+								&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;url:"视频地址",<br />
+								&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;subtitles:[<br />
+								&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{<br />
+								&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;defaultID:默认字幕，0为空<br />
+								&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;},{<br />
+								&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;name:"字幕名称",<br />
+								&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;url:"字幕地址"<br />
+								&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}<br />
+								&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;]<br />
+								&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}<br />
+								&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;]<br />
 								&nbsp;&nbsp;}<br />
 								&lt;/script&gt;<br />
 							</code>
@@ -180,6 +234,17 @@
 								13<br />
 								14<br />
 								15<br />
+								16<br />
+								17<br />
+								18<br />
+								19<br />
+								20<br />
+								21<br />
+								22<br />
+								23<br />
+								24<br />
+								25<br />
+								26<br />
 							</code>
 					</div>
 					<div style="flex: 1;">
@@ -188,15 +253,26 @@
 								&lt;script type="text/javascript" src="fdPlayerTouch.js"&gt;&lt;/script&gt;<br />
 								&lt;script&gt;<br />
 								&nbsp;&nbsp;player = {<br />
-								&nbsp;&nbsp;&nbsp;&nbsp;noid: "视频ID",<br />
-								&nbsp;&nbsp;&nbsp;&nbsp;name: "视频标题",<br />
-								&nbsp;&nbsp;&nbsp;&nbsp;url: "视频路径",<br />
-								&nbsp;&nbsp;&nbsp;&nbsp;url: "视频预览图路径",<br />
 								&nbsp;&nbsp;&nbsp;&nbsp;width: 视频宽度,<br />
 								&nbsp;&nbsp;&nbsp;&nbsp;height: 视频高度,<br />
 								&nbsp;&nbsp;&nbsp;&nbsp;viewWindow: "player",&nbsp;&nbsp;//播放视频的块区域ID<br />
-								&nbsp;&nbsp;&nbsp;&nbsp;centerPlayTimeBlockSwitch: true,&nbsp;&nbsp;//拖动时视频中央显示播放进度*<br />
-								&nbsp;&nbsp;&nbsp;&nbsp;autoplay: false&nbsp;&nbsp;//是否自动播放<br />
+								&nbsp;&nbsp;&nbsp;&nbsp;img: "视频预览图路径",<br />
+								&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;video:[<br />
+								&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{<br />
+								&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;defaultID:默认从第几个文件开始播放<br />
+								&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;},{<br />
+								&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;name: "视频名称",<br />
+								&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;url:"视频地址",<br />
+								&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;subtitles:[<br />
+								&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{<br />
+								&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;defaultID:默认字幕，0为空<br />
+								&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;},{<br />
+								&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;name:"字幕名称",<br />
+								&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;url:"字幕地址"<br />
+								&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}<br />
+								&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;]<br />
+								&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}<br />
+								&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;]<br />
 								&nbsp;&nbsp;}<br />
 								&lt;/script&gt;<br />
 							</code>
@@ -227,33 +303,50 @@
 								13<br />
 								14<br />
 								15<br />
+								16<br />
+								17<br />
+								18<br />
+								19<br />
+								20<br />
+								21<br />
+								22<br />
+								23<br />
+								24<br />
+								25<br />
+								26<br />
 							</code>
 					</div>
 					<div style="flex: 1;">
 						<code style="font-size: 16px;">
 								&lt;div id="player" style="margin: 0 auto;width: 800px;height: 600px;"&gt;&lt;/div&gt;<br />
-								&lt;script type="text/javascript" src="https://shanmaomaoymmm.github.io/FDplayer-Touch/fdPlayerTouch.js"&gt;&lt;/script&gt;<br />
+								&lt;script type="text/javascript" src="https://shanmaomaoymmm.github.io/FDplayer/fdPlayer.js"&gt;&lt;/script&gt;<br />
 								&lt;script&gt;<br />
 								&nbsp;&nbsp;player = {<br />
-								&nbsp;&nbsp;&nbsp;&nbsp;noid: "视频ID",<br />
-								&nbsp;&nbsp;&nbsp;&nbsp;name: "视频标题",<br />
-								&nbsp;&nbsp;&nbsp;&nbsp;url: "视频路径",<br />
-								&nbsp;&nbsp;&nbsp;&nbsp;url: "视频预览图路径",<br />
 								&nbsp;&nbsp;&nbsp;&nbsp;width: 视频宽度,<br />
 								&nbsp;&nbsp;&nbsp;&nbsp;height: 视频高度,<br />
 								&nbsp;&nbsp;&nbsp;&nbsp;viewWindow: "player",&nbsp;&nbsp;//播放视频的块区域ID<br />
-								&nbsp;&nbsp;&nbsp;&nbsp;centerPlayTimeBlockSwitch: true,&nbsp;&nbsp;//拖动时视频中央显示播放进度*<br />
-								&nbsp;&nbsp;&nbsp;&nbsp;autoplay: false&nbsp;&nbsp;//是否自动播放<br />
+								&nbsp;&nbsp;&nbsp;&nbsp;img: "视频预览图路径",<br />
+								&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;video:[<br />
+								&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{<br />
+								&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;defaultID:默认从第几个文件开始播放<br />
+								&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;},{<br />
+								&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;name: "视频名称",<br />
+								&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;url:"视频地址",<br />
+								&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;subtitles:[<br />
+								&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{<br />
+								&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;defaultID:默认字幕，0为空<br />
+								&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;},{<br />
+								&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;name:"字幕名称",<br />
+								&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;url:"字幕地址"<br />
+								&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}<br />
+								&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;]<br />
+								&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}<br />
+								&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;]<br />
 								&nbsp;&nbsp;}<br />
 								&lt;/script&gt;<br />
 							</code>
 					</div>
 				</article>
-				<p style="text-align: right;font-size: 10px;">
-					*注:已知在带有触摸屏功能的计算机上使用触屏拖动视频后会造成中心播放进度显示块无法自行消除。<br />
-					建议网页若运行在带有触摸屏功能的计算机上将centerPlayTimeBlockSwitch设置为false。<br/>
-					此缺陷不影响移动端设备（如iPhone）。
-				</p>
 			</div>
 		</div>
 	</div>
@@ -265,13 +358,13 @@
 			</p>
 			<div style="text-align: center;font-size: 25px;">
 				<p>
-					程序源代码遵循MPL2.0开源协议，可以免费用于商业用途<br />
+					程序源代码遵循MPL2.0开源协议<br />
 					如若转载请注明出处
 				</p>
 			</div>
 			<p style="text-align: center;">
 				项目地址: <a style="color: #424242;"
-					href="https://github.com/shanmaomaoymmm/FDplayer-Touch">https://github.com/shanmaomaoymmm/FDplayer-Touch</a>
+					href="https://github.com/shanmaomaoymmm/FDplayer-Touch">https://github.com/shanmaomaoymmm/FDplayer</a>
 			</p>
 		</div>
 	</div>
