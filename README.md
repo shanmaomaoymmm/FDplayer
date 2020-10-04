@@ -15,19 +15,31 @@
 >主体区域`<body>`插入插入以下代码:  
   
 ```html
-<div id="player" style="margin: 0 auto;width: 800px;height: 600px;"></div>  
-<script>  
-	player = {  
-		noid: "视频ID",  
-		name: "视频标题",  
-		url: "视频路径",  
-		img:"视频预览图路径",  
-		width: 视频宽度,  
-		height: 视频高度,  
-		viewWindow: "player", //播放视频的块区域ID  
-		centerPlayTimeBlockSwitch: true, //拖动时视频中央显示播放进度  
-		autoplay: false //是否自动播放  
-        }  
+<div id="player" style="margin: 0 auto;width: 800px;height: 600px;"></div>
+<script type="text/javascript" src="fdPlayerTouch.js"></script>
+<script>
+	player = {
+		width: 视频宽度,
+		height: 视频高度,
+		viewWindow: "player",  //播放视频的块区域ID
+		img: "视频预览图路径",
+		video:[
+			{
+				defaultID:默认从第几个文件开始播放
+			},{
+				name: "视频名称",
+				url:"视频地址",
+				subtitles:[
+					{
+						defaultID:默认字幕，0为空
+					},{
+						name:"字幕名称",
+						url:"字幕地址"
+					}
+				]
+			}
+		]
+	}
 </script>
 ```
 > + 方法二：  
@@ -37,22 +49,33 @@
 ```html
 <div id="player" style="margin: 0 auto;width: 800px;height: 600px;"></div>  
 <script type="text/javascript" src="fdPlayerTouch.js"></script>  
-<script>  
-	player = {  
-		noid: "视频ID",  
-		name: "视频标题",  
-		url: "视频路径", 
-		img:"视频预览图路径",   
-		width: 视频宽度,  
-		height: 视频高度,  
-		viewWindow: "player", //播放视频的块区域ID  
-		centerPlayTimeBlockSwitch: true, //拖动时视频中央显示播放进度*  
-		autoplay: false //是否自动播放  
-	}  
+<script>
+	player = {
+		width: 视频宽度,
+		height: 视频高度,
+		viewWindow: "player",  //播放视频的块区域ID
+		img: "视频预览图路径",
+		video:[
+			{
+				defaultID:默认从第几个文件开始播放
+			},{
+				name: "视频名称",
+				url:"视频地址",
+				subtitles:[
+					{
+						defaultID:默认字幕，0为空
+					},{
+						name:"字幕名称",
+						url:"字幕地址"
+					}
+				]
+			}
+		]
+	}
 </script>
 ```
 
-Deom地址：[https://shanmaomaoymmm.github.io/FDplayer-Touch](https://shanmaomaoymmm.github.io/FDplayer-Touch)  
+Deom地址：[https://shanmaomaoymmm.github.io/FDplayer](https://shanmaomaoymmm.github.io/FDplayer)  
   
 邮箱：Qisato@126.com
 
@@ -80,19 +103,30 @@ Support Firefox and Chromium
   
 ```html
 <div id="player" style="margin: 0 auto;width: 800px;height: 600px;"></div>  
-<script>  
-	player = {  
-		noid: "Video ID",  
-		name: "Video Title",  
-		url: "Video Path",
-		img:"Video Preview Image Path",    
-		width: video width,  
-		height: video height,  
-		viewWindow: "player", //lock area ID for playing video  
-		centerPlayTimeBlockSwitch: true, //The playback progress is displayed in the center of the video when dragging  
-		autoplay: false //Whether to play automatically  
-        }  
- </script>
+<script>
+	player = {
+		width: video width,
+		height: video height,
+		viewWindow: "player",  //The ID of the block area where the video is played
+		img: "Video preview image path",
+		video:[
+			{
+				defaultID:start playing from which file by default
+			},{
+				name: "Video Name",
+				url:"Video Address",
+				subtitles:[
+					{
+						defaultID:default subtitle, 0 is empty
+					},{
+						name:"Subtitle name",
+						url:"Subtitle address"
+					}
+				]
+			}
+		]
+	}
+</script>
 ```
 > + Method 2：  
 >   
@@ -101,22 +135,33 @@ Support Firefox and Chromium
 ```html
 <div id="player" style="margin: 0 auto;width: 800px;height: 600px;"></div>  
 <script type="text/javascript" src="fdPlayerTouch.js"></script>  
-<script>  
-	player = {  
-		noid: "Video ID",  
-		name: "Video Title",  
-		url: "Video Path",  
-		img:"Video Preview Image Path",    
-		width: video width,  
-		height: video height,  
-		viewWindow: "player", //lock area ID for playing video  
-		centerPlayTimeBlockSwitch: true, //The playback progress is displayed in the center of the video when dragging*  
-		autoplay: false //Whether to play automatically  
-        }
+<script>
+	player = {
+		width: video width,
+		height: video height,
+		viewWindow: "player",  //The ID of the block area where the video is played
+		img: "Video preview image path",
+		video:[
+			{
+				defaultID:start playing from which file by default
+			},{
+				name: "Video Name",
+				url:"Video Address",
+				subtitles:[
+					{
+						defaultID:default subtitle, 0 is empty
+					},{
+						name:"Subtitle name",
+						url:"Subtitle address"
+					}
+				]
+			}
+		]
+	}
 </script>
 ```
 
-Deom address：[https://shanmaomaoymmm.github.io/FDplayer-Touch](https://shanmaomaoymmm.github.io/FDplayer-Touch)  
+Deom address：[https://shanmaomaoymmm.github.io/FDplayer](https://shanmaomaoymmm.github.io/FDplayer)  
   
 Email：Qisato@126.com
 
