@@ -41,9 +41,7 @@ function setVideoWindow(player) {
 }
 
 /********功能区********/
-function playVideo(width,height,browser,thisVideo,pictureResource){
-	console.log(browser);
-	
+function playVideo(width,height,browser,thisVideo,pictureResource){	
 	/********对象元素********/
 	var playerView=document.getElementById("playerView");
 	var pauseButton=document.getElementById("pauseButton");
@@ -146,8 +144,6 @@ function playVideo(width,height,browser,thisVideo,pictureResource){
 	nameBerTitle.innerHTML=thisVideo[playID].name;
 	volumeChange(volume);
 	
-	//隐藏某些内容
-	
 	//建立播放列表
 	for(var i=1;i<thisVideo.length;i++){
 		selectPlayVideo(i,thisVideo[i].name,thisVideo[i].url);
@@ -190,7 +186,6 @@ function playVideo(width,height,browser,thisVideo,pictureResource){
 	//如果视频加载失败
 	video.onerror=function(){
 		videoState=false;
-		console.log("error");
 	}
 	
 	//进度条播放
