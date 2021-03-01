@@ -5,7 +5,8 @@
 适用于Firefox&Chromium
 
 Demo1:<https://shanmaomaoymmm.gitee.io/fdplayer/>  
-Demo2:<https://blog.qisato.com/page/?page=/list/fdplayer/text.md?name=FDplayer>
+Demo2:<https://shanmaomaoymmm.github.io/FDplayer/>
+Demo3:<https://blog.qisato.com/page/?page=/list/fdplayer/text.md?name=FDplayer>
 
 ## 使用帮助
 
