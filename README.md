@@ -1,169 +1,176 @@
-# FDplayer v0.10.1 
-### 一个简洁的HTML播放器  
-![下载后打开index.html查看Dome](https://shanmaomaoymmm.github.io/shanmoamoaymmmProjectDeomMedia/FDPlayer-Touch/img/img02.jpg)  
-  
-支持Firefox&Chromium  
-  
->### 调用方法
->+ 方法一：  
->  
->头部区域`<head>`中插入以下代码:  
->  
-```html
-<script type="text/javascript" src="fdPlayerTouch.js"></script>
+# FDplayer
+
+<p class="author">
+Qisato 文<br/>
+2020年9月1日
+</p>
+
+## 一个简洁的HTML触屏播放器
+
+适用于Firefox&Chromium
+
+<iframe src="https://blog.qisato.com/list/fdplayer/player.html"></iframe>
+<p class="label">
+*视频仅用于项目效果演示，请勿用于其他用途
+</p>
+
+## 使用帮助
+
+>适用于支持触屏的计算机，支持H.264，VP8等格式的视频文件播放
+
+![](https://shanmaomaoymmm.gitee.io/shanmoamoaymmmprojectdeommedia/FDPlayer-Touch/img/img05.jpg)
+
+>暂停、播放、全屏、调节播放进度和播放速度(支持PC端x0.25-x16/移动端x1-x3倍速播放)
+
+![](https://shanmaomaoymmm.gitee.io/shanmoamoaymmmprojectdeommedia/FDPlayer-Touch/img/img04.jpg)
+
+>调节播放进度时窗口中央显示播放进度
+
+![](https://shanmaomaoymmm.gitee.io/shanmoamoaymmmprojectdeommedia/FDPlayer-Touch/img/img01.jpg)
+
+>触屏优化：双击暂停&全屏
+
+![](https://shanmaomaoymmm.gitee.io/shanmoamoaymmmprojectdeommedia/FDPlayer-Touch/img/img03.jpg)
+<p class="label">
+*注：①不支持各系列IE浏览器。<br/>
+②仅支持能够支持HTML5及JavaScript脚本的新版Gecko和Webkit内核的浏览器，如果使用其他浏览器可能会造成显示异常。<br/>
+如不能正常显示，请更换您的浏览器。非专业用户推荐使用360极速浏览器。 
+</p>
+
+## 调用方法
+
+### 方法一：
+
+>头部区域`<head>`中插入以下代码:
 ```
->主体区域`<body>`插入插入以下代码:  
-  
-```html
+<script type="text/javascript" src="fdPlayer.js"></script>
+```
+>主体区域`<body>`插入插入以下代码:
+```
 <div id="player" style="margin: 0 auto;width: 800px;height: 600px;"></div>
-<script type="text/javascript" src="fdPlayerTouch.js"></script>
 <script>
-	player = {
-		width: 视频宽度,
-		height: 视频高度,
-		viewWindow: "player",  //播放视频的块区域ID
-		img: "视频预览图路径",
-		video:[
-			{
-				defaultID:默认从第几个文件开始播放
-			},{
-				name: "视频名称",
-				url:"视频地址",
-				subtitles:[
-					{
-						defaultID:默认字幕，0为空
-					},{
-						name:"字幕名称",
-						url:"字幕地址"
-					}
-				]
-			}
-		]
-	}
-</script>
-```
-> + 方法二：  
->   
->直接主体区域`<body>`插入插入以下代码：
-   
-```html
-<div id="player" style="margin: 0 auto;width: 800px;height: 600px;"></div>  
-<script type="text/javascript" src="fdPlayerTouch.js"></script>  
-<script>
-	player = {
-		width: 视频宽度,
-		height: 视频高度,
-		viewWindow: "player",  //播放视频的块区域ID
-		img: "视频预览图路径",
-		video:[
-			{
-				defaultID:默认从第几个文件开始播放
-			},{
-				name: "视频名称",
-				url:"视频地址",
-				subtitles:[
-					{
-						defaultID:默认字幕，0为空
-					},{
-						name:"字幕名称",
-						url:"字幕地址"
-					}
-				]
-			}
-		]
-	}
+    player = {
+        width: 视频宽度,
+        height: 视频高度,
+        viewWindow: "player",  //播放视频的块区域ID
+        img: "视频预览图路径",
+        video:[
+            {
+                defaultID:默认从第几个文件开始播放
+            },{
+                name: "视频名称",
+                url:"视频地址",
+                subtitles:[
+                    {
+                        defaultID:默认字幕，0为空
+                    },{
+                        name:"字幕名称",
+                        url:"字幕地址"
+                    }
+                ]
+            }
+        ]
+    }
 </script>
 ```
 
-Deom地址：[https://shanmaomaoymmm.github.io/FDplayer](https://shanmaomaoymmm.github.io/FDplayer)  
-  
-邮箱：Qisato@126.com
+### 方法二:
 
-<!-- [恰饭](https://shanmaomaoymmm.github.io/shanmoamoaymmmProjectDeomMedia/FDplayer-Touch/img/img09.jpg)  
-![↑恰饭二维码加载不出来点上方蓝字](https://shanmaomaoymmm.github.io/shanmoamoaymmmProjectDeomMedia/FDPlayer-Touch/img/img09.jpg) -->
-***
-***
-***
-# FDplayer v0.10.1 
-### A concise HTML player  
-(machine translation)  
-![Open index.html after download to view Dome](https://shanmaomaoymmm.github.io/shanmoamoaymmmProjectDeomMedia/FDPlayer-Touch/img/img02.jpg)  
-  
-Support Firefox and Chromium  
-  
->### Call method
-> + Method 1:  
->  
->Insert the following code in the head area `<head>`:  
->  
-```html
-<script type="text/javascript" src="fdPlayerTouch.js"></script>
+>直接主体区域`<body>`插入插入以下代码: 
 ```
->Body area `<body>` insert insert the following code:  
-  
-```html
-<div id="player" style="margin: 0 auto;width: 800px;height: 600px;"></div>  
+<div id="player" style="margin: 0 auto;width: 800px;height: 600px;"></div>
+<script type="text/javascript" src="fdPlayer.js"></script>
 <script>
-	player = {
-		width: video width,
-		height: video height,
-		viewWindow: "player",  //The ID of the block area where the video is played
-		img: "Video preview image path",
-		video:[
-			{
-				defaultID:start playing from which file by default
-			},{
-				name: "Video Name",
-				url:"Video Address",
-				subtitles:[
-					{
-						defaultID:default subtitle, 0 is empty
-					},{
-						name:"Subtitle name",
-						url:"Subtitle address"
-					}
-				]
-			}
-		]
-	}
-</script>
-```
-> + Method 2：  
->   
-> Insert the following code in the direct body area `<body>`：
-   
-```html
-<div id="player" style="margin: 0 auto;width: 800px;height: 600px;"></div>  
-<script type="text/javascript" src="fdPlayerTouch.js"></script>  
-<script>
-	player = {
-		width: video width,
-		height: video height,
-		viewWindow: "player",  //The ID of the block area where the video is played
-		img: "Video preview image path",
-		video:[
-			{
-				defaultID:start playing from which file by default
-			},{
-				name: "Video Name",
-				url:"Video Address",
-				subtitles:[
-					{
-						defaultID:default subtitle, 0 is empty
-					},{
-						name:"Subtitle name",
-						url:"Subtitle address"
-					}
-				]
-			}
-		]
-	}
+    player = {
+        width: 视频宽度,
+        height: 视频高度,
+        viewWindow: "player",  //播放视频的块区域ID
+        img: "视频预览图路径",
+        video:[
+            {
+                defaultID:默认从第几个文件开始播放
+            },{
+                name: "视频名称",
+                url:"视频地址",
+                subtitles:[
+                    {
+                        defaultID:默认字幕，0为空
+                    },{
+                        name:"字幕名称",
+                        url:"字幕地址"
+                    }
+                ]
+            }
+        ]
+    }
 </script>
 ```
 
-Deom address：[https://shanmaomaoymmm.github.io/FDplayer](https://shanmaomaoymmm.github.io/FDplayer)  
-  
-Email：Qisato@126.com
+### 方法三:
+>使用gitee服务，直接主体区域`<body>`插入插入以下代码: 
+```
+<div id="player" style="margin: 0 auto;width: 800px;height: 600px;"></div>
+<script type="text/javascript" 
+    src="https://shanmaomaoymmm.gitee.io/fdplayer/fdPlayer.js">
+</script>
+<script>
+    player = {
+        width: 视频宽度,
+        height: 视频高度,
+        viewWindow: "player",  //播放视频的块区域ID
+        img: "视频预览图路径",
+        video:[
+            {
+                defaultID:默认从第几个文件开始播放
+            },{
+                name: "视频名称",
+                url:"视频地址",
+                subtitles:[
+                    {
+                        defaultID:默认字幕，0为空
+                    },{
+                        name:"字幕名称",
+                        url:"字幕地址"
+                    }
+                ]
+            }
+        ]
+    }
+</script>
+```
 
-<!-- [Donation](https://shanmaomaoymmm.github.io/shanmoamoaymmmProjectDeomMedia/FDPlayer-Touch/img/img09.jpg)  
-![↑Donation QR code can not be loaded out of the blue word above the point](https://shanmaomaoymmm.github.io/shanmoamoaymmmProjectDeomMedia/FDPlayer-Touch/img/img09.jpg) -->
+作者：Qisato  
+邮箱：Qisato@126.com 
+
+### 程序源代码遵循MPL2.0开源协议
+### 如若转载请注明出处 
+
+项目地址:
+* Github：<https://github.com/shanmaomaoymmm/FDplayer>
+* Gitee：<https://gitee.com/shanmaomaoymmm/FDplayer>
+
+<p style="text-align:right">
+<i>本文遵循CC BY-NC版权协议;<br/>
+转载请注明出处</i>
+</p>
+
+<style>
+.author{
+    float:right;
+    font-weight: bold;
+    text-align:right;
+}  
+iframe{
+    width:100%;
+    height:550px;
+    border-radius: 6px;
+    border:0;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.25);
+}  
+.label{
+    text-align:right;
+}
+h1{
+    color:navy;
+}
+</style>
