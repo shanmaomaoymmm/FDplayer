@@ -1,18 +1,11 @@
 # FDplayer
 
-<p class="author">
-Qisato 文<br/>
-2020年9月1日
-</p>
-
 ## 一个简洁的HTML触屏播放器
 
 适用于Firefox&Chromium
 
-<iframe src="https://blog.qisato.com/list/fdplayer/player.html"></iframe>
-<p class="label">
-*视频仅用于项目效果演示，请勿用于其他用途
-</p>
+Demo1:<https://shanmaomaoymmm.gitee.io/fdplayer/>
+Demo2:<https://blog.qisato.com/page/?page=/list/fdplayer/text.md?name=FDplayer>
 
 ## 使用帮助
 
@@ -148,29 +141,3 @@ Qisato 文<br/>
 项目地址:
 * Github：<https://github.com/shanmaomaoymmm/FDplayer>
 * Gitee：<https://gitee.com/shanmaomaoymmm/FDplayer>
-
-<p style="text-align:right">
-<i>本文遵循CC BY-NC版权协议;<br/>
-转载请注明出处</i>
-</p>
-
-<style>
-.author{
-    float:right;
-    font-weight: bold;
-    text-align:right;
-}  
-iframe{
-    width:100%;
-    height:550px;
-    border-radius: 6px;
-    border:0;
-    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.25);
-}  
-.label{
-    text-align:right;
-}
-h1{
-    color:navy;
-}
-</style>
