@@ -32,62 +32,63 @@
 			document.documentElement.style.fontSize = originRootFontSize * scaleFactor * scaleFactor + 'px';
 		})();
 	</script>
-	<div style="text-align: center;font-size: 40px;margin: 20px;color: navy;"><b>FDplayer v0.10.0</b></div>
-	<div style="text-align: center;font-size: 30px;margin: 25px 0px 5px 0px;">一个简洁的H5播放器</div>
+	<div style="text-align: center;font-size: 40px;margin: 20px;color: navy;"><b>FDplayer v0.10.1</b></div>
+	<div style="text-align: center;font-size: 30px;margin: 25px 0px 5px 0px;">一个简洁的H5触屏播放器</div>
 	<div style="text-align: center;font-size: 16px">适用于Firefox&Chromium</div>
 	<div style="font-size: 25px;margin: 50px 0px 20px 0px;">
 		<div style="width: 800px;margin: 0 auto;">演示视频：<a style="color: #424242;" href="https://www.bilibili.com/video/BV1tW4114742">Hanser-舞池之实.mp4</a></div>
 	</div>
-	<div id="player" style="overflow: hidden;border-radius:5px; margin: 0 auto;width: 800px;height: 600px;box-shadow:0px 0px 5px rgba(0,0,0,0.5);background-color: rgba(0,0,0,0.25);">
+	<div id="player" style="overflow: hidden;border-radius:5px; margin: 0 auto;width: 800px;height: 600px;box-shadow:0px 0px 5px rgba(0,0,0,0.5);background-color: rgba(0,0,0,0.5);">
 	</div>
-	<div style="margin: 0 auto;width: 800px;font-size: 12px;text-align: right;">*视频仅用于项目效果演示，请勿用于其他用途</div>
+    <div style="margin: 0 auto;width: 800px;font-size: 12px;text-align: right;">*视频仅用于项目效果演示，请勿用于其他用途</div>
 	<script>
-		player = {
-			width: 800,
-			height: 600,
-			viewWindow: "player",
-			img: "https://shanmaomaoymmm.github.io/shanmoamoaymmmProjectDeomMedia/FDPlayer-Touch/img/img10.jpg",
-			video:[
+		var player = {
+			"width": 800,
+			"height": 600,
+			"viewWindow": "player",
+			"img": "https://shanmaomaoymmm.gitee.io/shanmoamoaymmmprojectdeommedia/FDPlayer-Touch/img/img10.jpg",
+			"video":[
 				{
-					defaultID:1
+					"defaultID":1
 				},
 				{
-					name: "Hanser-舞池之实",
-					url:"https://shanmaomaoymmm.github.io/shanmoamoaymmmProjectDeomMedia/FDPlayer-Touch/video/video-zh.mp4",
-					subtitles:[
+					"name": "Hanser-舞池之实",
+					"url":"https://archive.qisato.com/fdplayer/video-zh.mp4",
+					"subtitles":[
 						{
-							defaultID:1
+							"defaultID":1
 						},{
-							name:"中文",
-							url:"https://shanmaomaoymmm.github.io/shanmoamoaymmmProjectDeomMedia/FDPlayer-Touch/video/video-zh.vtt"
+							"name":"中文",
+							"url":"https://shanmaomaoymmm.gitee.io/shanmoamoaymmmprojectdeommedia/FDPlayer-Touch/video/video-zh.vtt"
 						},{
-							name:"日语",
-							url:"https://shanmaomaoymmm.github.io/shanmoamoaymmmProjectDeomMedia/FDPlayer-Touch/video/video-ja.vtt"
+							"name":"日语",
+							"url":"https://shanmaomaoymmm.gitee.io/shanmoamoaymmmprojectdeommedia/FDPlayer-Touch/video/video-ja.vtt"
 						},{
-							name:"English",
-							url:"https://shanmaomaoymmm.github.io/shanmoamoaymmmProjectDeomMedia/FDPlayer-Touch/video/video-en.vtt"
+							"name":"English",
+							"url":"https://shanmaomaoymmm.gitee.io/shanmoamoaymmmprojectdeommedia/FDPlayer-Touch/video/video-en.vtt"
 						}
 					]
 				},{
-					name: "ダンスフロアの果実",
-					url:"https://shanmaomaoymmm.github.io/shanmoamoaymmmProjectDeomMedia/FDPlayer-Touch/video/video-ja.mp4",
-					subtitles:[
+					"name": "ダンスフロアの果実",
+					"url":"https://archive.qisato.com/fdplayer/video-ja.mp4",
+					"subtitles":[
 						{
-							defaultID:2
+							"defaultID":2
 						},{
-							name:"中文",
-							url:"https://shanmaomaoymmm.github.io/shanmoamoaymmmProjectDeomMedia/FDPlayer-Touch/video/video-zh.vtt"
+							"name":"中文",
+							"url":"https://shanmaomaoymmm.gitee.io/shanmoamoaymmmprojectdeommedia/FDPlayer-Touch/video/video-zh.vtt"
 						},{
-							name:"日语",
-							url:"https://shanmaomaoymmm.github.io/shanmoamoaymmmProjectDeomMedia/FDPlayer-Touch/video/video-ja.vtt"
+							"name":"日语",
+							"url":"https://shanmaomaoymmm.gitee.io/shanmoamoaymmmprojectdeommedia/FDPlayer-Touch/video/video-ja.vtt"
 						},{
-							name:"English",
-							url:"https://shanmaomaoymmm.github.io/shanmoamoaymmmProjectDeomMedia/FDPlayer-Touch/video/video-en.vtt"
+							"name":"English",
+							"url":"https://shanmaomaoymmm.gitee.io/shanmoamoaymmmprojectdeommedia/FDPlayer-Touch/video/video-en.vtt"
 						}
 					]
 				}
 			],
 		}
+		fdplayer(JSON.stringify(player))
 	</script>
 
 	<div style="margin: 50px;font-size: 20px;">
@@ -96,7 +97,7 @@
 			<div>
 				<p>适用于支持触屏的计算机，支持H.264，VP8等格式的视频文件播放*</p>
 				<div style="text-align: center;">
-					<img src="https://shanmaomaoymmm.github.io/shanmoamoaymmmProjectDeomMedia/FDPlayer-Touch/img/img05.jpg"
+					<img src="https://shanmaomaoymmm.gitee.io/shanmoamoaymmmprojectdeommedia/FDPlayer-Touch/img/img05.jpg"
 						width="750px" />
 				</div>
 				<div style="text-align: right;font-size: 10px;">
@@ -106,21 +107,21 @@
 			<div>
 				<p>暂停、播放、全屏、调节播放进度和播放速度(支持PC端x0.25-x16/移动端x1-x3倍速播放)</p>
 				<div style="text-align: center;">
-					<img src="https://shanmaomaoymmm.github.io/shanmoamoaymmmProjectDeomMedia/FDPlayer-Touch/img/img04.jpg"
+					<img src="https://shanmaomaoymmm.gitee.io/shanmoamoaymmmprojectdeommedia/FDPlayer-Touch/img/img04.jpg"
 						width="750px" />
 				</div>
 			</div>
 			<div>
 				<p>调节播放进度时窗口中央显示播放进度</p>
 				<div style="text-align: center;">
-					<img src="https://shanmaomaoymmm.github.io/shanmoamoaymmmProjectDeomMedia/FDPlayer-Touch/img/img01.jpg"
+					<img src="https://shanmaomaoymmm.gitee.io/shanmoamoaymmmprojectdeommedia/FDPlayer-Touch/img/img01.jpg"
 						width="750px" />
 				</div>
 			</div>
 			<div>
 				<p>触屏优化：双击暂停&全屏</p>
 				<div style="text-align: center;">
-					<img src="https://shanmaomaoymmm.github.io/shanmoamoaymmmProjectDeomMedia/FDPlayer-Touch/img/img03.jpg"
+					<img src="https://shanmaomaoymmm.gitee.io/shanmoamoaymmmprojectdeommedia/FDPlayer-Touch/img/img03.jpg"
 						width="750px" />
 				</div>
 			</div>
@@ -179,6 +180,7 @@
 								23<br />
 								24<br />
 								25<br />
+								26<br />
 							</code>
 					</div>
 					<div style="flex: 1;">
@@ -186,27 +188,28 @@
 								&lt;script type="text/javascript" src="fdPlayer.js"&gt;&lt;/script&gt;<br />
 								&lt;script&gt;<br />
 								&nbsp;&nbsp;player = {<br />
-								&nbsp;&nbsp;&nbsp;&nbsp;width: 视频宽度,<br />
-								&nbsp;&nbsp;&nbsp;&nbsp;height: 视频高度,<br />
-								&nbsp;&nbsp;&nbsp;&nbsp;viewWindow: "player",&nbsp;&nbsp;//播放视频的块区域ID<br />
-								&nbsp;&nbsp;&nbsp;&nbsp;img: "视频预览图路径",<br />
-								&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;video:[<br />
+								&nbsp;&nbsp;&nbsp;&nbsp;"width": 视频宽度,<br />
+								&nbsp;&nbsp;&nbsp;&nbsp;"height": 视频高度,<br />
+								&nbsp;&nbsp;&nbsp;&nbsp;"viewWindow": "player",&nbsp;&nbsp;//播放视频的块区域ID<br />
+								&nbsp;&nbsp;&nbsp;&nbsp;"img": "视频预览图路径",<br />
+								&nbsp;&nbsp;&nbsp;&nbsp;"video":[<br />
 								&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{<br />
-								&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;defaultID:默认从第几个文件开始播放<br />
+								&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"defaultID":默认从第几个文件开始播放<br />
 								&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;},{<br />
-								&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;name: "视频名称",<br />
-								&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;url:"视频地址",<br />
-								&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;subtitles:[<br />
+								&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"name": "视频名称",<br />
+								&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"url":"视频地址",<br />
+								&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"subtitles":[<br />
 								&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{<br />
-								&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;defaultID:默认字幕，0为空<br />
+								&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"defaultID":默认字幕，0为空<br />
 								&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;},{<br />
-								&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;name:"字幕名称",<br />
-								&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;url:"字幕地址"<br />
+								&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"name":"字幕名称",<br />
+								&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"url":"字幕地址"<br />
 								&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}<br />
 								&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;]<br />
 								&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}<br />
 								&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;]<br />
 								&nbsp;&nbsp;}<br />
+								&nbsp;&nbsp;fdplayer(JSON.stringify(player))&nbsp;&nbsp;//此处确保为纯文本JSON<br />
 								&lt;/script&gt;<br />
 							</code>
 					</div>
@@ -246,6 +249,7 @@
 								24<br />
 								25<br />
 								26<br />
+								27<br />
 							</code>
 					</div>
 					<div style="flex: 1;">
@@ -254,34 +258,35 @@
 								&lt;script type="text/javascript" src="fdPlayerTouch.js"&gt;&lt;/script&gt;<br />
 								&lt;script&gt;<br />
 								&nbsp;&nbsp;player = {<br />
-								&nbsp;&nbsp;&nbsp;&nbsp;width: 视频宽度,<br />
-								&nbsp;&nbsp;&nbsp;&nbsp;height: 视频高度,<br />
-								&nbsp;&nbsp;&nbsp;&nbsp;viewWindow: "player",&nbsp;&nbsp;//播放视频的块区域ID<br />
-								&nbsp;&nbsp;&nbsp;&nbsp;img: "视频预览图路径",<br />
-								&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;video:[<br />
+								&nbsp;&nbsp;&nbsp;&nbsp;"width": 视频宽度,<br />
+								&nbsp;&nbsp;&nbsp;&nbsp;"height": 视频高度,<br />
+								&nbsp;&nbsp;&nbsp;&nbsp;"viewWindow": "player",&nbsp;&nbsp;//播放视频的块区域ID<br />
+								&nbsp;&nbsp;&nbsp;&nbsp;"img": "视频预览图路径",<br />
+								&nbsp;&nbsp;&nbsp;&nbsp;"video":[<br />
 								&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{<br />
-								&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;defaultID:默认从第几个文件开始播放<br />
+								&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"defaultID":默认从第几个文件开始播放<br />
 								&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;},{<br />
-								&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;name: "视频名称",<br />
-								&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;url:"视频地址",<br />
-								&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;subtitles:[<br />
+								&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"name": "视频名称",<br />
+								&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"url":"视频地址",<br />
+								&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"subtitles":[<br />
 								&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{<br />
-								&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;defaultID:默认字幕，0为空<br />
+								&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"defaultID":默认字幕，0为空<br />
 								&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;},{<br />
-								&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;name:"字幕名称",<br />
-								&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;url:"字幕地址"<br />
+								&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"name":"字幕名称",<br />
+								&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"url":"字幕地址"<br />
 								&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}<br />
 								&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;]<br />
 								&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}<br />
 								&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;]<br />
 								&nbsp;&nbsp;}<br />
+								&nbsp;&nbsp;fdplayer(JSON.stringify(player))&nbsp;&nbsp;//此处确保为纯文本JSON<br />
 								&lt;/script&gt;<br />
 							</code>
 					</div>
 				</article>
 			</div>
 			<div>
-				<p>方法三（不稳定，无需下载，适合使用Github Page搭建的网页）:</p>
+				<p>方法三（受Gitee网速限制，无需下载）:</p>
 				<p>
 					直接主体区域&lt;body&gt;插入插入以下代码:
 				</p>
@@ -315,35 +320,37 @@
 								24<br />
 								25<br />
 								26<br />
+								27<br />
 							</code>
 					</div>
 					<div style="flex: 1;">
 						<code style="font-size: 16px;">
 								&lt;div id="player" style="margin: 0 auto;width: 800px;height: 600px;"&gt;&lt;/div&gt;<br />
-								&lt;script type="text/javascript" src="https://shanmaomaoymmm.github.io/FDplayer/fdPlayer.js"&gt;&lt;/script&gt;<br />
+								&lt;script type="text/javascript" src="https://shanmaomaoymmm.gitee.io/fdplayer/fdPlayer.js"&gt;&lt;/script&gt;<br />
 								&lt;script&gt;<br />
 								&nbsp;&nbsp;player = {<br />
-								&nbsp;&nbsp;&nbsp;&nbsp;width: 视频宽度,<br />
-								&nbsp;&nbsp;&nbsp;&nbsp;height: 视频高度,<br />
-								&nbsp;&nbsp;&nbsp;&nbsp;viewWindow: "player",&nbsp;&nbsp;//播放视频的块区域ID<br />
-								&nbsp;&nbsp;&nbsp;&nbsp;img: "视频预览图路径",<br />
-								&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;video:[<br />
+								&nbsp;&nbsp;&nbsp;&nbsp;"width": 视频宽度,<br />
+								&nbsp;&nbsp;&nbsp;&nbsp;"height": 视频高度,<br />
+								&nbsp;&nbsp;&nbsp;&nbsp;"viewWindow": "player",&nbsp;&nbsp;//播放视频的块区域ID<br />
+								&nbsp;&nbsp;&nbsp;&nbsp;"img": "视频预览图路径",<br />
+								&nbsp;&nbsp;&nbsp;&nbsp;"video":[<br />
 								&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{<br />
-								&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;defaultID:默认从第几个文件开始播放<br />
+								&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"defaultID":默认从第几个文件开始播放<br />
 								&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;},{<br />
-								&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;name: "视频名称",<br />
-								&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;url:"视频地址",<br />
-								&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;subtitles:[<br />
+								&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"name": "视频名称",<br />
+								&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"url":"视频地址",<br />
+								&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"subtitles":[<br />
 								&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{<br />
-								&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;defaultID:默认字幕，0为空<br />
+								&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"defaultID":默认字幕，0为空<br />
 								&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;},{<br />
-								&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;name:"字幕名称",<br />
-								&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;url:"字幕地址"<br />
+								&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"name":"字幕名称",<br />
+								&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"url":"字幕地址"<br />
 								&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}<br />
 								&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;]<br />
 								&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}<br />
 								&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;]<br />
 								&nbsp;&nbsp;}<br />
+								&nbsp;&nbsp;fdplayer(JSON.stringify(player))&nbsp;&nbsp;//此处确保为纯文本JSON<br />
 								&lt;/script&gt;<br />
 							</code>
 					</div>
@@ -365,8 +372,10 @@
 			</div>
 			<p style="text-align: center;">
 				<span style="font-size:20px">项目地址</span><br/>
-		                Github：<a style="color: #424242;"href="https://github.com/shanmaomaoymmm/FDplayer-Touch">https://github.com/shanmaomaoymmm/FDplayer</a><br/>
-                		Gitee：<a style="color: #424242;"href="https://gitee.com/shanmaomaoymmm/FDplayer">https://gitee.com/shanmaomaoymmm/FDplayer</a>
+                Github：<a style="color: #424242;"
+					href="https://github.com/shanmaomaoymmm/FDplayer-Touch">https://github.com/shanmaomaoymmm/FDplayer</a><br/>
+                Gitee：<a style="color: #424242;"
+					href="https://gitee.com/shanmaomaoymmm/FDplayer">https://gitee.com/shanmaomaoymmm/FDplayer</a>
 			</p>
 		</div>
 	</div>
@@ -377,15 +386,15 @@
 			</p>
 			<div style="width: 800px;display: flex;text-align: center;margin: 0 auto;">
 				<div style="flex: 1;">
-					<img src="https://shanmaomaoymmm.github.io/shanmoamoaymmmProjectDeomMedia/FDPlayer-Touch/img/img06.jpg"
+					<img src="https://shanmaomaoymmm.gitee.io/shanmoamoaymmmprojectdeommedia/FDPlayer-Touch/img/img06.jpg"
 						style="width: 200px;" />
 				</div>
 				<div style="flex: 1;">
-					<img src="https://shanmaomaoymmm.github.io/shanmoamoaymmmProjectDeomMedia/FDPlayer-Touch/img/img08.jpg"
+					<img src="https://shanmaomaoymmm.gitee.io/shanmoamoaymmmprojectdeommedia/FDPlayer-Touch/img/img08.jpg"
 						style="width: 200px;" />
 				</div>
 				<div style="flex: 1;">
-					<img src="https://shanmaomaoymmm.github.io/shanmoamoaymmmProjectDeomMedia/FDPlayer-Touch/img/img07.jpg"
+					<img src="https://shanmaomaoymmm.gitee.io/shanmoamoaymmmprojectdeommedia/FDPlayer-Touch/img/img07.jpg"
 						style="width: 200px;" />
 				</div>
 			</div>

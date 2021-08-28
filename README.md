@@ -6,7 +6,6 @@
 
 Demo1:<https://shanmaomaoymmm.gitee.io/fdplayer/>  
 Demo2:<https://shanmaomaoymmm.github.io/FDplayer/>
-Demo3:<https://blog.qisato.com/page/?page=/list/fdplayer/text.md?name=FDplayer>
 
 ## 使用帮助
 
@@ -44,27 +43,28 @@ Demo3:<https://blog.qisato.com/page/?page=/list/fdplayer/text.md?name=FDplayer>
 <div id="player" style="margin: 0 auto;width: 800px;height: 600px;"></div>
 <script>
     player = {
-        width: 视频宽度,
-        height: 视频高度,
-        viewWindow: "player",  //播放视频的块区域ID
-        img: "视频预览图路径",
-        video:[
+        "width": 视频宽度,
+        "height": 视频高度,
+        "viewWindow": "player",  //播放视频的块区域ID
+        "img": "视频预览图路径",
+        "video":[
             {
-                defaultID:默认从第几个文件开始播放
+                "defaultID":默认从第几个文件开始播放
             },{
-                name: "视频名称",
-                url:"视频地址",
-                subtitles:[
+                "name": "视频名称",
+                "url":"视频地址",
+                "subtitles":[
                     {
-                        defaultID:默认字幕，0为空
+                        "defaultID":默认字幕，0为空
                     },{
-                        name:"字幕名称",
-                        url:"字幕地址"
+                        "name":"字幕名称",
+                        "url":"字幕地址"
                     }
                 ]
             }
         ]
     }
+    fdplayer(JSON.stringify(player))  //此处确保为纯文本JSON
 </script>
 ```
 
@@ -76,27 +76,28 @@ Demo3:<https://blog.qisato.com/page/?page=/list/fdplayer/text.md?name=FDplayer>
 <script type="text/javascript" src="fdPlayer.js"></script>
 <script>
     player = {
-        width: 视频宽度,
-        height: 视频高度,
-        viewWindow: "player",  //播放视频的块区域ID
-        img: "视频预览图路径",
-        video:[
+        "width": 视频宽度,
+        "height": 视频高度,
+        "viewWindow": "player",  //播放视频的块区域ID
+        "img": "视频预览图路径",
+        "video":[
             {
-                defaultID:默认从第几个文件开始播放
+                "defaultID":默认从第几个文件开始播放
             },{
-                name: "视频名称",
-                url:"视频地址",
-                subtitles:[
+                "name": "视频名称",
+                "url":"视频地址",
+                "subtitles":[
                     {
-                        defaultID:默认字幕，0为空
+                        "defaultID":默认字幕，0为空
                     },{
-                        name:"字幕名称",
-                        url:"字幕地址"
+                        "name":"字幕名称",
+                        "url":"字幕地址"
                     }
                 ]
             }
         ]
     }
+    fdplayer(JSON.stringify(player))  //此处确保为纯文本JSON
 </script>
 ```
 
@@ -109,27 +110,28 @@ Demo3:<https://blog.qisato.com/page/?page=/list/fdplayer/text.md?name=FDplayer>
 </script>
 <script>
     player = {
-        width: 视频宽度,
-        height: 视频高度,
-        viewWindow: "player",  //播放视频的块区域ID
-        img: "视频预览图路径",
-        video:[
+        "width": 视频宽度,
+        "height": 视频高度,
+        "viewWindow": "player",  //播放视频的块区域ID
+        "img": "视频预览图路径",
+        "video":[
             {
-                defaultID:默认从第几个文件开始播放
+                "defaultID":默认从第几个文件开始播放
             },{
-                name: "视频名称",
-                url:"视频地址",
-                subtitles:[
+                "name": "视频名称",
+                "url":"视频地址",
+                "subtitles":[
                     {
-                        defaultID:默认字幕，0为空
+                        "defaultID":默认字幕，0为空
                     },{
-                        name:"字幕名称",
-                        url:"字幕地址"
+                        "name":"字幕名称",
+                        "url":"字幕地址"
                     }
                 ]
             }
         ]
     }
+    fdplayer(JSON.stringify(player))  //此处确保为纯文本JSON
 </script>
 ```
 
